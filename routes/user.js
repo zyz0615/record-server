@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 const User = mongoose.model('User')
 var express = require('express');
 var router = express.Router();
-const retMessage = require('../static/retMessage')
+const retMessage = require('../static/retMessageCh')
 
 router.post('/addUser', function(req, res, next) {
     let user = req.body

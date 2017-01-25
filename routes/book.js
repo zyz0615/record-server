@@ -3,7 +3,7 @@ const Book = mongoose.model('Book')
 const User = mongoose.model('User')
 var express = require('express');
 var router = express.Router();
-const retMessage = require('../static/retMessage')
+const retMessage = require('../static/retMessageCh')
 
 router.use((req, res, next) => {
     let userId = req.body && req.body.userId

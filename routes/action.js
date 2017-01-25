@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 var express = require('express');
 var router = express.Router();
-var retMessage = require('../static/retMessage')
+var retMessage = require('../static/retMessageCh')
 
 const Action = mongoose.model('Action')
 const ActivatedAction = mongoose.model('ActivatedAction')
