@@ -164,7 +164,18 @@ router.post('/newAction', function(req, res, next) {
                         if (err) {
                             res.send(err);
                         } else {
-                            res.send(retMessage.SUCCESS('Create action'))
+                            User.update({ userId: req.body.userId }, {
+                                $addToSet: {
+                                    actions: actionId
+                                }
+                            }, (err) => {
+                                if (err) {
+                                    res.send(err)
+                                } else {
+                                    res.send(retMessage.SUCCESS('添加活动'))
+                                }
+                            })
+
                         }
                     })
                 }
