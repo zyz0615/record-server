@@ -77,7 +77,7 @@ router.post('/checkin', function(req, res, next) {
                                     console.error(err)
                                 }
                             })
-                            res.send(retMessage.SUCCESS('Check in'))
+                            res.send(retMessage.SUCCESS('签到'))
                         }
                     })
                 } else {
@@ -127,9 +127,9 @@ router.post('/checkout', function(req, res, next) {
                             ActivatedAction.findOneAndRemove({
                                 actionId: actionId
                             }, (err, res) => {
-                                console.log(err || 'Remove success')
+                                console.log(err || '修改数据库状态成功')
                             })
-                            res.send(retMessage.SUCCESS('Check out'))
+                            res.send(retMessage.SUCCESS('签出'))
                         }
                     })
                 } else {

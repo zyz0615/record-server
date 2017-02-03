@@ -8,7 +8,9 @@ router.post('/addUser', function(req, res, next) {
     let user = req.body
     let userId = user && user.userId
     if (userId) {
-        User.find({ userId: userId }, (err, resp) => {
+        User.find({
+            userId: userId
+        }, (err, resp) => {
             if (err) {
                 res.send(err)
             } else {
@@ -26,7 +28,7 @@ router.post('/addUser', function(req, res, next) {
                         if (err) {
                             res.send(err)
                         } else {
-                            res.send(retMessage.SUCCESS('Create user'))
+                            res.send(retMessage.SUCCESS('创建用户'))
                         }
                     })
                 }

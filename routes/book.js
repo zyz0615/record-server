@@ -55,10 +55,10 @@ router.post('/newBook', function(req, res, next) {
                                     if (userErr) {
                                         res.send(userErr)
                                     } else {
-                                        res.send(retMessage.SUCCESS('Add a new book'))
+                                        res.send(retMessage.SUCCESS('添加图书'))
                                     }
                                 })
-                                res.send(retMessage.SUCCESS('Add a new book'))
+                                res.send(retMessage.SUCCESS('添加图书'))
                             }
                         })
                     } else {
@@ -79,7 +79,7 @@ router.post('/newBook', function(req, res, next) {
                                     if (userErr) {
                                         res.send(userErr)
                                     } else {
-                                        res.send(retMessage.SUCCESS('Add a new book'))
+                                        res.send(retMessage.SUCCESS('添加图书'))
                                     }
                                 })
                             }
